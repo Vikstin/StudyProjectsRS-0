@@ -1,132 +1,135 @@
-* {
-    box-sizing: border-box;
+*, *::before, *::after {
+    box-sizing: inherit;
   }
-
 html {
+    box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
-.bg {
-    display: flex;
-    width: 1440px;
-    height: 910px;
-    left: 0px;
-    top: 0px;
-    background: url('./assets/img/bg.jpg');
-    background-repeat: no-repeat;
-    background-position: center 0;
-}
-
-.container {
-    display: flex;
-    width: 1440px;
-    margin: 0 auto;
-    padding: 0 20px; 
-}
-.header {
-    display: flex;
-    width: 1440px;
-    height: 90px;
-    left: 0px;
-    top: 0px;
-}
-
-.icon {
-    width: 50px;
-    height: 50px;
-    left: 20px;
-    top: 20px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    fill: #FFFFFF;
-}  
-      
-.icon:hover {
-    fill: #bdae82;
-}
-
-
-.nav {
-    margin-left: auto;
-}
-
-.nav-list {
-    display: flex;
-    align-items: center;
-    list-style: none;
-}
-
-.nav-link {
-    padding: 0 20px;
-    line-height: 50px;
-    transition: .3s;
-}
-
-a:link {
-    color: #FFFFFF;
-    text-decoration: none;    
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 50px;
-    transition: color 0.5s;
-  }
-a:hover {
-    color: #bdae82;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 50px;
-}
-
-a:visited {
-    color: #bdae82;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 50px;
-}
-
-.switch-lng {
-    /*display: flex;*/
-    align-items: center;
-    color: #FFFFFF;
-} 
-
-h1 {
-    font-family: 'Merriweather', serif;
-    color: #FFFFFF;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 60px;
-    line-height: 120px;
-}
-
-.hero-text {
-    /*position: absolute; ???
-    height: 120px;
-    left: 0%;
-    right: 6%;
-    top: 130px;*/
-
+body {
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
     line-height: 40px;
     color: #FFFFFF;
+    width: 1440px;
 }
 
-.btn {
+/* Header styles start */
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+.logo {
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    fill: #FFFFFF;
+    cursor: pointer;
+}  
+.logo:hover {
+    fill: #bdae82;
+}
+.header-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    align-items: center;
+    height: 90px;
+    padding: 20px;
+    margin: 0 auto;
+    background: url('./assets/img/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
+}
+.header-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.header-lng {
+    display: flex;
+    align-items: center;
+}
+.nav {
+    margin-left: auto;
+}
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+.nav-item {
+    margin-right: 30px;
+ }
+.nav-link {
+    text-decoration: none;
+    color: #FFFFFF;
+    line-height: 50px;
+    transition: .3s;
+}
+.nav-link:hover, .nav-link:focus, .nav-link:active, .nav-link:visited {
+    color: #bdae82;
+}
+.switch-lng {
+    cursor: pointer;
+}
+
+/* Header styles end */
+
+/* Hero styles start */
+
+.hero-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 1440px;
+    height: 820px;
+    padding-left: 80px;
+    padding-top: 160px;
+    background-image: url('./assets/img/bg.jpg');
+    background-position: center -90px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero {
+    width: 500px;
+    height: 330px;
+}
+.hero-name {
+    width: 500px;
+    height: 120px;
+    margin-bottom: 10px;
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 120px;
+    color: #FFFFFF;
+}
+.hero-text {
+    width: 470px;
+    height: 120px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+}
+.button {
     height: 55px;
-    width: 220px;
+    width: 220;
     border: none;
     border-radius: 0px;
     outline: 0;
     display: inline-block;
-    padding: 10px 25px;
+    padding: 8px 72px;
     color: #000000;
     background-color: #bdae82;
     cursor: pointer;
@@ -137,7 +140,29 @@ h1 {
     line-height: 40px;
     text-align: center;
 }
-.btn:hover {
+.button:hover {
     color: #FFFFFF;
     background-color: #bdae82;
 }
+
+/* Hero styles end */
+
+/* Skills styles start */
+.container {
+    background: #000000;
+}
+.skills-container {
+    width: 1440px;
+    height: 482px;
+}
+.section-title {
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 80px;
+    text-align: center;
+    color: #BDAE82;
+}
+
+/* Hero styles end */
