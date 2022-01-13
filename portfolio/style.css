@@ -14,7 +14,9 @@ body {
     color: #FFFFFF;
     width: 1440px;
 }
-
+.section-title {
+    padding: 100px 0px 60px 0px;
+}
 /* Header styles start */
 
 .header-logo {
@@ -129,7 +131,7 @@ body {
     border-radius: 0px;
     outline: 0;
     display: inline-block;
-    padding: 8px 72px;
+    padding: 7.5px 72.5px;
     color: #000000;
     background-color: #bdae82;
     cursor: pointer;
@@ -143,8 +145,16 @@ body {
 .button:hover {
     color: #FFFFFF;
     background-color: #bdae82;
-}
 
+    
+}
+.button:active {
+    border: 1px solid #BDAE82;
+    box-sizing: border-box;
+    border-radius: 0px;
+    background-color: #000000;
+    transition: .3s;
+}
 /* Hero styles end */
 
 /* Skills styles start */
@@ -175,7 +185,6 @@ body {
     justify-content: space-between;
     height: 242px;
     padding-left: 20px;
-    padding-top: 60px;
 }
 .items-camera, .items-video, .items-retouch, .items-audio {
     display: flex;
@@ -231,6 +240,60 @@ body {
     text-align: center;
     color: #FFFFFF;
 }
-
-
 /* Skills styles end */
+
+/* Portfolio styles start */
+.portfolio-container {
+    height: 1500px;
+}
+.portfolio-btns {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center;
+    align-items: center; */
+    width: 895px;
+    height: 55px;
+    margin-left: 272px;
+    margin-bottom: 60px;
+    gap: 5px;
+}
+.button-weather {
+    height: 55px;
+    width: 220px;
+    border: 2px solid #BDAE82;
+    box-sizing: border-box;
+    border-radius: 0px;
+    padding: 7.5px 73px;
+    color: #bdae82;
+    background-color: #000000;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+}
+.button-weather:hover, :focus {
+    color: #FFFFFF;
+    border: 2px solid #BDAE82;
+}
+.button-weather:active {
+    color: #000000;
+    background: #BDAE82;
+    transition: .4s;
+}
+.portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 20px;
+    height: 1145px;
+    gap: 25px;
+}
+.photo {
+    width: 450px;
+    height: 560px;
+    border-radius: 0px;
+}
+/* Portfolio styles end */
