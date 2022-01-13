@@ -170,17 +170,19 @@ body {
 }
 .skills-items {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 242px;
+    height: 242px;
     padding-left: 20px;
     padding-top: 60px;
 }
-.items-camera {
+.items-camera, .items-video, .items-retouch, .items-audio {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-content: center;
+    padding: 0px 20px 8px 20px;
     width: 320px;
     height: 240px;
     background-position: center top;
@@ -191,7 +193,22 @@ body {
     background-size: 62px 50px;
     background-repeat: no-repeat;    
 }
-.camera_name {
+.items-video:nth-child(2) {
+    background-image: url('./assets/svg/video 1.svg');
+    background-size: 62px 50px;
+    background-repeat: no-repeat;    
+}
+.items-retouch:nth-child(3) {
+    background-image: url('./assets/svg/image 1.svg');
+    background-size: 62px 50px;
+    background-repeat: no-repeat;    
+}
+.items-audio:nth-child(4) {
+    background-image: url('./assets/svg/mic 1.svg');
+    background-size: 62px 50px;
+    background-repeat: no-repeat;    
+}
+.services {
     padding-top: 100px;
     width: 280px;
     height: 40px;
@@ -202,7 +219,7 @@ body {
     line-height: 40px;
     text-align: center;
 }
-.camera_description {
+.description {
     width: 280px;
     height: 72px;
     padding-top: 60px;
