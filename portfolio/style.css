@@ -32,7 +32,7 @@ body {
     fill: #FFFFFF;
     cursor: pointer;
 }  
-.logo:hover {
+.logo:hover, :focus {
     fill: #bdae82;
 }
 .header-container {
@@ -249,8 +249,6 @@ body {
 .portfolio-btns {
     display: flex;
     flex-direction: row;
-    /* justify-content: center;
-    align-items: center; */
     width: 895px;
     height: 55px;
     margin-left: 272px;
@@ -297,3 +295,26 @@ body {
     border-radius: 0px;
 }
 /* Portfolio styles end */
+
+/*Video styles end */
+.video-player {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+.play {
+    position: absolute;
+}
+.play-hover {
+    cursor: pointer;
+    fill: #FFFFFF;
+    width: 130px;
+    height: 130px;
+}
+.play-hover:hover, :focus {
+    fill: #bdae82;
+    transition: .4s;
+}
+/* Video styles end */
