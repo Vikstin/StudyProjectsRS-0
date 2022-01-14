@@ -13,6 +13,7 @@ body {
     line-height: 40px;
     color: #FFFFFF;
     width: 1440px;
+    background: #000000;
 }
 .section-title {
     padding: 100px 0px 60px 0px;
@@ -155,11 +156,7 @@ body {
 /* Hero styles end */
 
 /* Skills styles start */
-.container {
-    background: #000000;
-}
-.skills-container {
-    width: 1440px;
+.skills {
     height: 482px;
 }
 .section-title {
@@ -240,7 +237,7 @@ body {
 /* Skills styles end */
 
 /* Portfolio styles start */
-.portfolio-container {
+.portfolio {
     height: 1500px;
 }
 .portfolio-btns {
@@ -378,3 +375,67 @@ body {
     margin-bottom: 40px;
 }
 /* Price styles end */
+
+/* Contact styles start */
+
+.contacts {
+    display: flex;
+    height: 700px;
+    padding: 60px 20px 195px 970px;
+}
+.contacts-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 445px;
+    width: 450px;
+}
+.contacts {
+    background: url('./assets/img/contacts.jpg');
+    background-size: auto 700px;
+    background-position: center;
+}
+.contacts-title {
+    width: 450px;
+    margin-bottom: 40px;
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 80px;
+    color: #BDAE82;
+}
+.email-input, .tel-input {
+    width: 450px;
+    height: 50px;
+    border: 2px solid #BDAE82;
+    box-sizing: border-box;
+    border-radius: 0px;
+    background-color: transparent;
+    background: rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+.message-input {
+    width: 450px;
+    height: 100px;
+    border: 2px solid #BDAE82;
+    box-sizing: border-box;
+    border-radius: 0px;
+    background-color: transparent;
+    background: rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+    resize: none;
+    padding-left: 20px;
+}
+::placeholder {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    color: #BDAE82;
+}
+/* Contact styles end */
