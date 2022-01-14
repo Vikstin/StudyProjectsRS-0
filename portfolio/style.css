@@ -124,15 +124,13 @@ body {
     color: #FFFFFF;
     margin-bottom: 25px;
 }
-.button {
+.button-gold {
+   display: inline-block;
     height: 55px;
-    width: 220;
-    border: none;
+    width: 220px;
+    border: 0;
     border-radius: 0px;
-    outline: 0;
-    display: inline-block;
-    padding: 7.5px 72.5px;
-    color: #000000;
+    outline: 0;    
     background-color: #bdae82;
     cursor: pointer;
     font-family: 'Inter', sans-serif;
@@ -141,14 +139,13 @@ body {
     font-size: 20px;
     line-height: 40px;
     text-align: center;
+    color: #000000;
 }
-.button:hover {
+.button-gold:hover {
     color: #FFFFFF;
-    background-color: #bdae82;
-
-    
+    background-color: #bdae82;  
 }
-.button:active {
+.button-gold:active {
     border: 1px solid #BDAE82;
     box-sizing: border-box;
     border-radius: 0px;
@@ -255,7 +252,7 @@ body {
     margin-bottom: 60px;
     gap: 5px;
 }
-.button-weather {
+.button-black {
     height: 55px;
     width: 220px;
     border: 2px solid #BDAE82;
@@ -263,7 +260,7 @@ body {
     border-radius: 0px;
     padding: 7.5px 73px;
     color: #bdae82;
-    background-color: #000000;
+    background-color: transparent;
     cursor: pointer;
     font-family: 'Inter', sans-serif;
     font-style: normal;
@@ -272,11 +269,11 @@ body {
     line-height: 40px;
     text-align: center;
 }
-.button-weather:hover, :focus {
+.button-black:hover, :focus {
     color: #FFFFFF;
     border: 2px solid #BDAE82;
 }
-.button-weather:active {
+.button-black:active {
     color: #000000;
     background: #BDAE82;
     transition: .4s;
@@ -318,3 +315,66 @@ body {
     transition: .4s;
 }
 /* Video styles end */
+
+/* Price styles start */
+.price {
+    height: 845px;
+}
+.price-items {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 20px;
+    height: 505px;
+    width: 1400px;
+    gap: 25px;    
+}
+.block_item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 505px;
+    border: 3px solid #BDAE82;
+    box-sizing: border-box;
+    border-radius: 0px;
+    padding: 40px 0 40px 0;
+}
+.name-item {
+    width: 128px;
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 56px;     
+    text-align: center;    
+    color: #FFFFFF; 
+    text-align: center;
+    margin-bottom: 20px;
+}
+.price-item {
+    width: 69px;
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 48px;
+    text-align: center;
+    color: #BDAE82;
+    margin-bottom: 20px;
+}
+.description-item {
+    width: 364px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+}
+/* Price styles end */
