@@ -439,3 +439,58 @@ body {
     color: #BDAE82;
 }
 /* Contact styles end */
+
+/* Footer styles start */
+.container-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 150px;
+    padding: 50px 20px;
+}
+.footer-date {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 182px;
+    height: 50px;
+    gap: 20px;
+}
+.social-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 188px;
+    height: 50px;
+    fill: #FFFFFF;
+    cursor: pointer;
+    gap: 20px;
+}
+.icons {
+    width: 32px;
+    height: 32px;
+}
+.social-icons {
+    height: 32px;
+    fill: #FFFFFF;
+    transition: .3s;
+}
+.social-icons:hover, :focus, :active {
+    fill: #bdae82;
+    transition: .3s;
+}
+.RS {
+    display: flex;
+    align-items: center;
+}
+.my-github {
+    text-decoration: none;
+    color: #FFFFFF;
+    line-height: 50px;
+    transition: .3s;
+}
+.my-github:hover, :focus, :active, :visited {
+    color: #bdae82;
+}
+/* Footer styles end */
