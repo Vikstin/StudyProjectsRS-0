@@ -13,11 +13,10 @@ body {
     line-height: 40px;
     color: #FFFFFF;
     width: 1440px;
-    background: #000000;
+    background-color: #000000;
+    margin: 0 auto;
 }
-.section-title {
-    padding: 100px 0px 60px 0px;
-}
+
 /* Header styles start */
 
 .header-logo {
@@ -74,10 +73,13 @@ body {
     text-decoration: none;
     color: #FFFFFF;
     line-height: 50px;
-    transition: .3s;
+    transition: 1s;
 }
-.nav-link:hover, .nav-link:focus, .nav-link:active, .nav-link:visited {
+.nav-link:hover, .nav-link:focus, .nav-link:active {
     color: #bdae82;
+}
+.nav-link:visited {
+    color: grey;
 }
 .switch-lng {
     cursor: pointer;
@@ -126,12 +128,11 @@ body {
     margin-bottom: 25px;
 }
 .button-gold {
-   display: inline-block;
+    display: inline-block;
     height: 55px;
     width: 220px;
     border: 0;
-    border-radius: 0px;
-    outline: 0;    
+    border-radius: 0px;    
     background-color: #bdae82;
     cursor: pointer;
     font-family: 'Inter', sans-serif;
@@ -142,16 +143,16 @@ body {
     text-align: center;
     color: #000000;
 }
-.button-gold:hover {
+.button-gold:hover, :focus {
     color: #FFFFFF;
-    background-color: #bdae82;  
+    transition: 1s;  
 }
 .button-gold:active {
+    color: #FFFFFF;
     border: 1px solid #BDAE82;
-    box-sizing: border-box;
-    border-radius: 0px;
-    background-color: #000000;
-    transition: .3s;
+    background-color: #000000; 
+    transform: 3s;
+    
 }
 /* Hero styles end */
 
@@ -160,6 +161,7 @@ body {
     height: 482px;
 }
 .section-title {
+    display: flex;
     font-family: 'Merriweather', serif;
     font-style: normal;
     font-weight: bold;
@@ -167,10 +169,27 @@ body {
     line-height: 80px;
     text-align: center;
     color: #BDAE82;
-}
-.section-title {
-    padding-top: 100px;
+    padding: 100px 0px 60px 0px;
     margin: 0 auto;
+    max-width: 700px;
+    justify-content: center;
+    align-items: center;
+}
+.section-title::before {
+    background-color: #BDAE82;
+    content: "";
+    height: 2px;
+    width: 294px;
+    margin-right: 20px;
+    flex-basis: 50%;
+}
+.section-title::after {
+    background-color: #BDAE82;
+    content: "";
+    height: 2px;
+    width: 294px;
+    margin-left: 20px;
+    flex-basis: 50%;
 }
 .skills-items {
     display: flex;
@@ -190,7 +209,6 @@ body {
     height: 240px;
     background-position: center top;
 }
-
 .items-camera:nth-child(1) {
     background-image: url('./assets/svg/camera 1.svg');
     background-size: 62px 50px;
@@ -268,12 +286,17 @@ body {
 }
 .button-black:hover, :focus {
     color: #FFFFFF;
-    border: 2px solid #BDAE82;
+    transition: 1s;
 }
 .button-black:active {
+    display: inline-block;
+    height: 55px;
+    width: 220px;
+    border: 0;
+    border-radius: 0px;
+    outline: 0;    
+    background-color: #bdae82;
     color: #000000;
-    background: #BDAE82;
-    transition: .4s;
 }
 .portfolio-items {
     display: flex;
@@ -309,7 +332,7 @@ body {
 }
 .play-hover:hover, :focus {
     fill: #bdae82;
-    transition: .4s;
+    transition: 1s;
 }
 /* Video styles end */
 
@@ -459,6 +482,7 @@ body {
 }
 .social-list {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 188px;
@@ -471,26 +495,30 @@ body {
     width: 32px;
     height: 32px;
 }
-.social-icons {
+.social-icon {
     height: 32px;
+    width: 32px;
     fill: #FFFFFF;
-    transition: .3s;
+    transition: 1s;
 }
-.social-icons:hover, :focus, :active {
+.social-icon:hover, :focus, :active {
     fill: #bdae82;
-    transition: .3s;
 }
-.RS {
+.RS-box {
     display: flex;
     align-items: center;
+    width: 211px;
 }
-.my-github {
+.my-github, .RS {
     text-decoration: none;
     color: #FFFFFF;
     line-height: 50px;
-    transition: .3s;
+    transition: 1s;
 }
 .my-github:hover, :focus, :active, :visited {
+    color: #bdae82;
+}
+.RS:hover, :focus, :active, :visited {
     color: #bdae82;
 }
 /* Footer styles end */
