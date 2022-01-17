@@ -32,7 +32,7 @@ body {
     fill: #FFFFFF;
     cursor: pointer;
 }  
-.logo:hover, :focus {
+.logo:hover {
     fill: #bdae82;
 }
 .header-container {
@@ -75,13 +75,22 @@ body {
     line-height: 50px;
     transition: 1s;
 }
-.nav-link:hover, .nav-link:focus, .nav-link:active {
+.nav-link:hover,
+.nav-link:active {
     color: #bdae82;
 }
 .nav-link:visited {
     color: grey;
 }
 .switch-lng {
+    display: block;
+}
+.switch-lng_en {
+    color: #bdae82;
+    cursor: pointer;
+}
+.switch-lng_ru:hover {
+    color: #bdae82;
     cursor: pointer;
 }
 
@@ -128,7 +137,7 @@ body {
     margin-bottom: 25px;
 }
 .button-gold {
-    display: inline-block;
+    display: block;
     height: 55px;
     width: 220px;
     border: 0;
@@ -143,7 +152,7 @@ body {
     text-align: center;
     color: #000000;
 }
-.button-gold:hover, :focus {
+.button-gold:hover {
     color: #FFFFFF;
     transition: 1s;  
 }
@@ -152,7 +161,6 @@ body {
     border: 1px solid #BDAE82;
     background-color: #000000; 
     transform: 3s;
-    
 }
 /* Hero styles end */
 
@@ -208,6 +216,14 @@ body {
     width: 320px;
     height: 240px;
     background-position: center top;
+}
+.items-camera:hover,
+.items-video:hover,
+.items-retouch:hover,
+.items-audio:hover {
+    color: #BDAE82;
+    cursor: pointer;
+    transition: 1s;
 }
 .items-camera:nth-child(1) {
     background-image: url('./assets/svg/camera 1.svg');
@@ -268,6 +284,7 @@ body {
     gap: 5px;
 }
 .button-black {
+    display: block;
     height: 55px;
     width: 220px;
     border: 2px solid #BDAE82;
@@ -284,7 +301,7 @@ body {
     line-height: 40px;
     text-align: center;
 }
-.button-black:hover, :focus {
+.button-black:hover {
     color: #FFFFFF;
     transition: 1s;
 }
@@ -330,7 +347,7 @@ body {
     width: 130px;
     height: 130px;
 }
-.play-hover:hover, :focus {
+.play-hover:hover {
     fill: #bdae82;
     transition: 1s;
 }
@@ -374,6 +391,11 @@ body {
     color: #FFFFFF; 
     text-align: center;
     margin-bottom: 20px;
+}
+.name-item:hover {
+    cursor: pointer;
+    color: #BDAE82;
+    transition: 1s;
 }
 .price-item {
     width: 69px;
@@ -501,7 +523,8 @@ body {
     fill: #FFFFFF;
     transition: 1s;
 }
-.social-icon:hover, :focus, :active {
+.social-icon:hover,
+.social-icon:active {
     fill: #bdae82;
 }
 .RS-box {
@@ -515,10 +538,16 @@ body {
     line-height: 50px;
     transition: 1s;
 }
-.my-github:hover, :focus, :active, :visited {
+.my-github:hover {
     color: #bdae82;
 }
-.RS:hover, :focus, :active, :visited {
+.my-github:visited {
+    color:gray;
+}
+.RS:hover {
     color: #bdae82;
+}
+.RS:visited {
+    color:gray;
 }
 /* Footer styles end */
