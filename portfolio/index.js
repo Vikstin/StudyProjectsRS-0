@@ -2,7 +2,7 @@ console.log ('');
 
 //Change image at click
 
-const portfolioBtn = document.querySelector('.button-gold');
+const portfolioBtn = document.querySelector('.portfolio-btn');
 const portfolioImages = document.querySelectorAll('.photo');
 
 portfolioBtn.addEventListener('click', () => {
