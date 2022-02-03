@@ -187,6 +187,10 @@ body {
     background-color: var(--color-black); 
     transform: 3s;
 }
+.portfolio-btn.active {
+    color: #000;
+    background-color: #bdae82;
+  }
 /* Hero styles end */
 
 /* Skills styles start */
@@ -605,13 +609,13 @@ body {
     .header-container {
         width: 100vw;
         padding: 20px 64px 20px 60px;
-        background: url('./assets/img/bg-small.jpg');
+        background: url('./assets/img/bg.jpg');
     }
     .hero-container {
         width: 100vw;
         padding: 78px 318px 152px 60px;
         height: 500px;
-        background: url('./assets/img/bg-small.jpg');
+        background: url('./assets/img/bg.jpg');
         background-position: center -90px;
         background-repeat: no-repeat;
         background-size: cover;
