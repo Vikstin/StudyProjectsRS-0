@@ -96,7 +96,7 @@ body {
 .nav-link:active {
     color: var(--color-gold);
 }
-.switch-lng {
+.switch-lng-block {
     display: block;
     font-family: var(--font-Int);
     font-style: normal;
@@ -106,17 +106,8 @@ body {
     text-align: center;
     color: var(--color-white);
 }
-.switch-lng_en {
-    color: var(--color-gold);
-    cursor: pointer;
-    font-family: var(--font-Int);
-    font-style: normal;
-    font-weight: bold;
-    font-size: var(--font2);
-    line-height: 50px;
-    text-align: center;
-}
-.switch-lng_ru {
+.switch-lng {
+    background-color: transparent;
     font-family: var(--font-Int);
     font-style: normal;
     font-weight: bold;
@@ -124,11 +115,16 @@ body {
     line-height: 50px;
     text-align: center;
     color: var(--color-white);
-}
-.switch-lng_ru:hover {
-    color: var(--color-gold);
     cursor: pointer;
 }
+.switch-lng:hover {
+    color: var(--color-gold);
+}
+.activ-lng {
+    color: var(--color-gold);
+}
+
+
 
 /* Header styles end */
 
