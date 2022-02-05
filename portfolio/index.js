@@ -1,4 +1,6 @@
+
 console.log ('');
+
 
 
 //Open-close menu
@@ -23,6 +25,7 @@ function click() {
 }
 
 links.forEach((burger) => burger.addEventListener("click", click));
+
 
 
 //Change image at click
