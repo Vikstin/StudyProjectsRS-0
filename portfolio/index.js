@@ -1,1 +1,49 @@
-console.log ('1 Вёрстка валидная +10 \n 2 Вёрстка семантическая +20 \n 3 Вёрстка соответствует макету +48 \n 4 Требования к css + 12 \n 5 Интерактивность реализуемая через css +20 \n Итого: 100 баллов');
+console.log ('');
+
+
+//Open-close menu
+
+const burger = document.querySelector('.burger-menu');
+const menu = document.querySelector('.nav');
+
+function toggleMenu() {
+    menu.classList.toggle('open');
+    burger.classList.toggle('open');
+}
+burger.addEventListener('click', toggleMenu);
+
+
+//Close menu at click link
+
+const links = document.querySelectorAll(".nav-link");
+
+function click() {
+  menu.classList.remove("open");
+  burger.classList.remove("open");
+}
+
+links.forEach((burger) => burger.addEventListener("click", click));
+
+
+//Change image at click
+
+const portfolioBtn = document.querySelectorAll('.portfolio-btn');
+const portfolioBtns = document.querySelector('.portfolio-buttons');
+const portfolioImages = document.querySelectorAll('.photo');
+
+
+portfolioBtns.addEventListener('click', changeImage);
+
+function changeImage(event) {
+    if(event.target.classList.contains('portfolio-btn')) {
+        for (let i = 0; i < portfolioBtn.length; i++){
+            portfolioBtn[i].classList.remove('active');
+        }
+        
+        event.target.classList.add('active');
+        
+        let dataValue = event.target.getAttribute('data-season');
+        portfolioImages.forEach((img, index) => img.src = `./assets/img/${dataValue}/${index + 1}.jpg`);
+    
+}
+}
