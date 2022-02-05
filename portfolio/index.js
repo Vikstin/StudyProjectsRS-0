@@ -1,4 +1,6 @@
-// console.log ('Не успеваю сделать 3 часть, в ходе кросс-чека попробую догнать.\nОставьте плиз Ваш ник, чтоб я смогла написать Вам в Дискорд');
+
+console.log ('');
+
 
 
 //Open-close menu
@@ -25,3 +27,26 @@ function click() {
 links.forEach((burger) => burger.addEventListener("click", click));
 
 
+
+//Change image at click
+
+const portfolioBtn = document.querySelectorAll('.portfolio-btn');
+const portfolioBtns = document.querySelector('.portfolio-buttons');
+const portfolioImages = document.querySelectorAll('.photo');
+
+
+portfolioBtns.addEventListener('click', changeImage);
+
+function changeImage(event) {
+    if(event.target.classList.contains('portfolio-btn')) {
+        for (let i = 0; i < portfolioBtn.length; i++){
+            portfolioBtn[i].classList.remove('active');
+        }
+        
+        event.target.classList.add('active');
+        
+        let dataValue = event.target.getAttribute('data-season');
+        portfolioImages.forEach((img, index) => img.src = `./assets/img/${dataValue}/${index + 1}.jpg`);
+    
+}
+}

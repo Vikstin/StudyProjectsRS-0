@@ -96,7 +96,7 @@ body {
 .nav-link:active {
     color: var(--color-gold);
 }
-.switch-lng {
+.switch-lng-block {
     display: block;
     font-family: var(--font-Int);
     font-style: normal;
@@ -106,17 +106,8 @@ body {
     text-align: center;
     color: var(--color-white);
 }
-.switch-lng_en {
-    color: var(--color-gold);
-    cursor: pointer;
-    font-family: var(--font-Int);
-    font-style: normal;
-    font-weight: bold;
-    font-size: var(--font2);
-    line-height: 50px;
-    text-align: center;
-}
-.switch-lng_ru {
+.switch-lng {
+    background-color: transparent;
     font-family: var(--font-Int);
     font-style: normal;
     font-weight: bold;
@@ -124,11 +115,16 @@ body {
     line-height: 50px;
     text-align: center;
     color: var(--color-white);
-}
-.switch-lng_ru:hover {
-    color: var(--color-gold);
     cursor: pointer;
 }
+.switch-lng:hover {
+    color: var(--color-gold);
+}
+.activ-lng {
+    color: var(--color-gold);
+}
+
+
 
 /* Header styles end */
 
@@ -187,6 +183,10 @@ body {
     background-color: var(--color-black); 
     transform: 3s;
 }
+.portfolio-btn.active {
+    color: #000;
+    background-color: #bdae82;
+  }
 /* Hero styles end */
 
 /* Skills styles start */
@@ -605,13 +605,13 @@ body {
     .header-container {
         width: 100vw;
         padding: 20px 64px 20px 60px;
-        background: url('./assets/img/bg-small.jpg');
+        background: url('./assets/img/bg.jpg');
     }
     .hero-container {
         width: 100vw;
         padding: 78px 318px 152px 60px;
         height: 500px;
-        background: url('./assets/img/bg-small.jpg');
+        background: url('./assets/img/bg.jpg');
         background-position: center -90px;
         background-repeat: no-repeat;
         background-size: cover;
@@ -752,7 +752,7 @@ body {
         transform: rotate(45deg) translate(-5px, -6px);
     }
     .nav {
-        position: absolute;
+        position: fixed;
         z-index: 2;
         top: 0px;
         right: -620px;
