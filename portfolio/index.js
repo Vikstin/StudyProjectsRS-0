@@ -47,3 +47,14 @@ function changeImage(event) {
     
 }
 }
+
+// Video-player
+
+const progress = document.querySelector('.progress');
+const progressVolume = document.querySelector('.progress-volume');
+
+progress.addEventListener('input', function() {
+  const value = this.value;
+  this.style.background = `linear-gradient(to right, ##bdae82 0%, ##bdae82 ${value}%, #fff ${value}%, white 100%)`
+})
+ 

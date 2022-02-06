@@ -111,13 +111,21 @@
                 
             <section class="video" id="video">
                 <h2 class="section-title" data-i18="video">Video</h2>
-                <div class="video-player">
-                    <a href="" class="play">
-                        <svg class="play-hover">
-                            <use xlink:href="./assets/svg/sprite.svg#play_hover"></use>
-                        </svg>
-                    </a>
+                <div class="video-player-container">
+                    <div class="video-player">
+                        <video class="video-viewer" src="assets/video/video.mp4"></video>
+                            <div class="play-hover"></div>
+                        <div class="player_controls">
+                            <div class="play-button play"></div>
+                            <input type="range" value="40" min="0" max="100" step="1" class="progress">
+                            <div class="volume-button volume"></div>
+                            <input type="range" value="40" min="0" max="100" step="1" class="progress-volume">
+                        </div>
+                        
+                                                
+                    </div>
                 </div>
+                
             </section>
     
             <section class="price" id="price">
