@@ -50,11 +50,66 @@ function changeImage(event) {
 
 // Video-player
 
-const progress = document.querySelector('.progress');
-const progressVolume = document.querySelector('.progress-volume');
+// const player = document.querySelector('video-player');
+const video = document.querySelector('video.viewer');
+const controlPlay = document.querySelector('div.play-button');
+const buttonPlay = document.querySelector('div.play');
+const controlPlay_hover = document.querySelector('video.div.play-hover');
+const progress = document.querySelector('input.progress');
+const progressVolume = document.querySelector('input.progress-volume');
+const ranges = document.querySelectorAll('input.range');
+// var drag;
+// var grap;
+// var progression;
+ 
 
+video.addEventListener('click', togglePlay);
+controlPlay.addEventListener('click', togglePlay);
+video.addEventListener('play', updateButton);
+video.addEventListener('pause', updateButton);
+video.addEventListener('timeupdate', handelProgress);
+ranges.forEach(range => range.addEventListener('change', handelRangeUpdate));
+ranges.forEach(range => range.addEventListener('mousemove', handelRangeUpdate));
+progress.addEventListener('click', scrub);
+
+function togglePlay() {
+    if (video.paused) {
+        video.play();
+    } else {
+        video.pause();
+    } 
+}
+
+function updateButton() {
+    if (this.paused) {
+        buttonPlay.style.backgroundImage = "url('./assets/video/play.svg')";
+        // controlPlay_hover.classList.toggle('play-hover');
+    } else {
+        buttonPlay.style.backgroundImage = "url('./assets/video/pause.svg')";
+        // controlPlay_hover.classList.remove('play-hover');
+    }
+}
+
+function handelRangeUpdate() {
+    video[this.name] = this.value;
+}
+
+function handelProgress() {
+    const persent = (video.currentTime / video.duration) * 100;
+    progress.style.flexBasic = `${persent}%`;
+}
+
+function scrub(e) {
+    const sctubTime = (e.offsetX / progress.offsetWidth) * video.duration;
+    video.currentTime = sctubTime;
+}
+
+//Change color progress
 progress.addEventListener('input', function() {
   const value = this.value;
-  this.style.background = `linear-gradient(to right, ##bdae82 0%, ##bdae82 ${value}%, #fff ${value}%, white 100%)`
+  this.style.background = `linear-gradient(to right, #bdae82 0%, #bdae82 ${value}%, #fff ${value}%, white 100%)`
 })
- 
+progressVolume.addEventListener('input', function() {
+    const value = this.value;
+    this.style.background = `linear-gradient(to right, #bdae82 0%, #bdae82 ${value}%, #fff ${value}%, white 100%)`
+  })

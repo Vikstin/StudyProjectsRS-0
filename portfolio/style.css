@@ -391,9 +391,9 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    width: calc(100% + 2px);
     padding: 0 20px;
     height: 60px;
-    gap: 30px;
 }
 .play {
     background-image: url(/assets/video/play.svg);
@@ -418,11 +418,16 @@ body {
      rgb(189, 174, 130) 8%,
      rgb(200, 200, 200) 8%,
      rgb(200, 200, 200) 100%);
+     border: solid 2px var(--color-gold);
     height: 11px;
     width: calc(80% - 160px);
     outline: none;
     transition: background 450ms ease-in;
+    /* flex-basis: 10%; */
     -webkit-appearance: none;
+}
+.progress-volume {
+    width: calc(20% - 40px);
 }
 .progress::-webkit-slider-thumb,
 .progress-volume::-webkit-slider-thumb {
