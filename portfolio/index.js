@@ -52,24 +52,27 @@ function changeImage(event) {
 
 // const player = document.querySelector('video-player');
 const video = document.querySelector('video.viewer');
-const controlPlay = document.querySelector('div.play-button');
+// const controlPlay = document.querySelector('div.play-button');
 const buttonPlay = document.querySelector('div.play');
+const buttonVol = document.querySelector('div.volume');
 const controlPlay_hover = document.querySelector('video.div.play-hover');
 const progress = document.querySelector('input.progress');
-const progressVolume = document.querySelector('input.progress-volume');
-const ranges = document.querySelectorAll('input.range');
+// const progressVolume = document.querySelector('input.progress-volume');
+const rangeVol = document.querySelectorAll('input.progress-volume');
 // var drag;
 // var grap;
 // var progression;
  
 
 video.addEventListener('click', togglePlay);
-controlPlay.addEventListener('click', togglePlay);
-video.addEventListener('play', updateButton);
-video.addEventListener('pause', updateButton);
-video.addEventListener('timeupdate', handelProgress);
-ranges.forEach(range => range.addEventListener('change', handelRangeUpdate));
-ranges.forEach(range => range.addEventListener('mousemove', handelRangeUpdate));
+buttonPlay.addEventListener('click', togglePlay);
+video.addEventListener('play', updateButtonPlay);
+video.addEventListener('pause', updateButtonPlay);
+video.addEventListener('timeupdate', updateProgress);
+buttonVol.addEventListener('click', updateButtonVol); 
+rangeVol.forEach(range => range.addEventListener('change', updateVol));
+rangeVol.forEach(range => range.addEventListener('mousemove', updateVol));
+rangeVol.addEventListener('input', changeColor);
 progress.addEventListener('click', scrub);
 
 function togglePlay() {
@@ -80,7 +83,7 @@ function togglePlay() {
     } 
 }
 
-function updateButton() {
+function updateButtonPlay() {
     if (this.paused) {
         buttonPlay.style.backgroundImage = "url('./assets/video/play.svg')";
         // controlPlay_hover.classList.toggle('play-hover');
@@ -90,18 +93,26 @@ function updateButton() {
     }
 }
 
-function handelRangeUpdate() {
-    video[this.name] = this.value;
+function updateVol() {
+    var volume = this.value;
+    video.volume = volume;
 }
 
-function handelProgress() {
-    const persent = (video.currentTime / video.duration) * 100;
+function updateButtonVol() {
+        if (rangeVol === 0) {
+        buttonVol.style.backgroundImage = "url('./assets/video/mute.svg')";
+}
+    buttonVol.style.backgroundImage = "url('./assets/video/volume.svg')";
+}
+
+function updateProgress() {
+    var progress = (video.currentTime / video.duration) * 100;
     progress.style.flexBasic = `${persent}%`;
 }
 
 function scrub(e) {
-    const sctubTime = (e.offsetX / progress.offsetWidth) * video.duration;
-    video.currentTime = sctubTime;
+    const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
+    video.currentTime = scrubTime;
 }
 
 //Change color progress
@@ -109,7 +120,8 @@ progress.addEventListener('input', function() {
   const value = this.value;
   this.style.background = `linear-gradient(to right, #bdae82 0%, #bdae82 ${value}%, #fff ${value}%, white 100%)`
 })
-progressVolume.addEventListener('input', function() {
+
+function changeColor() {
     const value = this.value;
-    this.style.background = `linear-gradient(to right, #bdae82 0%, #bdae82 ${value}%, #fff ${value}%, white 100%)`
-  })
+    this.style.background = `linear-gradient(to right, #bdae82 0%, #bdae82 ${value}%, #fff ${value}%, white 100%)`;
+}
