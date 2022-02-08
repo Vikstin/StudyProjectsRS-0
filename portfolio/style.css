@@ -412,6 +412,39 @@ body {
  background-image: url(/assets/video/volume.svg);
 }
 .progress {
+    flex:10;
+    position: relative;
+    display: flex;
+    flex-basis: 60%;
+    height: 11px;
+    transition:height 0.3s;
+    background: linear-gradient(to right,
+     rgb(189, 174, 130) 0%, 
+     rgb(189, 174, 130) 8%,
+     rgb(200, 200, 200) 8%,
+     rgb(200, 200, 200) 100%);
+     border: solid 2px var(--color-gold);
+    /* width: calc(80% - 160px); */
+    cursor: ew-resize;
+    /* transition: background 450ms ease-in; */
+    -webkit-appearance: none;
+}
+.slider {
+    /* background: linear-gradient(to right,
+     rgb(189, 174, 130) 0%, 
+     rgb(189, 174, 130) 8%,
+     rgb(200, 200, 200) 8%,
+     rgb(200, 200, 200) 100%);
+     border: solid 2px var(--color-gold); */
+    flex:0;
+    flex-basis: 15%;
+    height: 11px;
+    /* width: calc(20% - 40px); */
+    outline: none;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+}
+/* .progress {
     background: linear-gradient(to right,
      rgb(189, 174, 130) 0%, 
      rgb(189, 174, 130) 8%,
@@ -425,7 +458,7 @@ body {
     flex: 0;
     flex-basis: 70%;
     -webkit-appearance: none;
-}
+} */
 
 .progress-volume {
     background: linear-gradient(to right,
@@ -438,11 +471,16 @@ body {
     width: calc(20% - 40px);
     outline: none;
     transition: background 450ms ease-in;
-    /* flex: 0;
-    flex-basis: 15%; */
     -webkit-appearance: none;
 }
-.progress::-webkit-slider-thumb,
+.slider::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    cursor: ew-resize;
+    background: var(--color-white);
+}
 .progress-volume::-webkit-slider-thumb {
     width: 20px;
     height: 20px;
