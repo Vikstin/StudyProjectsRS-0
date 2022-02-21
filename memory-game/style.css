@@ -2,10 +2,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-  }
+}
 body {
     display: flex;
-    background-color: blanchedalmond;
+    flex-direction: column;
+    background-color: #000;
     height: 100vh;
 }
 .memory-game {
@@ -18,7 +19,7 @@ body {
 }
 .memory-card {
     width: calc(25% - 10px);
-    height: calc(33.333% - 10px);
+    height: calc(33% - 10px);
     margin: 5px;
     position: relative;
     transform-style: preserve-3d;
@@ -31,7 +32,9 @@ body {
     transform: scale(0.97);
     transition: transform .2s;
 }
-      
+.memory-card.flip {
+    transform: rotateY(180deg);
+}      
 .front-face,
 .back-face {
     width: 100%;
@@ -39,13 +42,46 @@ body {
     padding: 7px;
     position: absolute;
     border-radius: 5px;
-    background: #1C7CCC;
+    background: #FA8072;
     backface-visibility: hidden;
 }
 .front-face {
     transform: rotateY(180deg);
-  }
+}
 
-.memory-card.flip {
-    transform: rotateY(180deg);
-  }
+
+/* Footer */
+
+.container-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+.footer-date {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 182px;
+    height: 50px;
+    gap: 20px;
+    font-family: 'Roboto Serif', sans-serif;
+    font-size: 16px;
+    line-height: 50px;
+    color: #FA8072;
+}
+.RS-box {
+    display: flex;
+    align-items: center;
+    width: 211px;
+    font-family: 'Roboto Serif', sans-serif;
+    line-height: 50px;
+    color: #FA8072;
+}
+.my-github, .RS {
+    text-decoration: none;
+    color: #FA8072;
+    line-height: 50px;
+    transition: 1s;
+}

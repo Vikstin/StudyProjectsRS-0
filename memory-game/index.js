@@ -40,7 +40,7 @@ const cards = document.querySelectorAll('.memory-card');
       secondCard.classList.remove('flip');
 
       resetBoard();
-    }, 1500);
+    }, 1000);
   }
 
   function resetBoard() {
