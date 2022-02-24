@@ -72,6 +72,12 @@ body {
     transform: scale(0.97);
     transition: transform .2s;
 }
+.step-counter {
+    color: #FA8072;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+}
 
 /* Footer */
 
